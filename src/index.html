@@ -196,7 +196,7 @@ path: home
 
   <section class="evening" aria-labelledby="close-heading">
     <svg class="evening__hills" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0 70C220 30 420 50 640 40s460-40 800 10V110H0Z" fill="var(--dusk)"/>
+      <path d="M0 70C220 30 420 50 640 40s460-40 800 10V124H0Z" fill="var(--dusk)"/>
     </svg>
     <div class="evening__sky" aria-hidden="true">
       <svg class="evening__moon" viewBox="-30 -30 60 60"><path d="M14-22a26 26 0 1 0 8 40 21 21 0 1 1-8-40Z" fill="#f4efd9"/></svg>
@@ -329,7 +329,14 @@ path: home
       requestAnimationFrame(function () { queued = false; drive(); });
     }
 
-    function redraw() { drawLane(); drive(); }
+    /* On screens wider than the drawing, keep the landscape at its own size and let
+       the hills run on to the edges, instead of zooming in and cropping the sky. */
+    function fit() {
+      var box = svg.getBoundingClientRect();
+      svg.setAttribute("preserveAspectRatio", box.width / box.height > 1440 / 520 ? "xMidYMax meet" : "xMidYMax slice");
+    }
+
+    function redraw() { fit(); drawLane(); drive(); }
 
     root.classList.add("drive");
     redraw();
