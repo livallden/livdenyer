@@ -1,0 +1,19 @@
+<svg class="motif" viewBox="0 0 162 110" aria-hidden="true">
+  <defs>
+    <clipPath id="pot-shape">
+      <path d="M66 20h28v4c0 4-4 6-4 12 0 8 26 16 26 38 0 16-12 26-32 26S52 90 52 74c0-22 26-30 26-38 0-6-4-8-4-12Z"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="88" cy="102" rx="60" ry="5" fill="var(--hill-1)"/>
+  <path d="M66 20h28v4c0 4-4 6-4 12 0 8 26 16 26 38 0 16-12 26-32 26S52 90 52 74c0-22 26-30 26-38 0-6-4-8-4-12Z" fill="var(--clay)"/>
+  <g clip-path="url(#pot-shape)">
+    <path d="M40 0h80v54c-6 3-10-1-16 2s-10 5-16 1-10-4-16 0-10 3-16-1-10-2-16 1Z" fill="var(--sky-deep)"/>
+    <path d="M58 82c14 5 30 5 44 0" fill="none" stroke="#b07552" stroke-width="1.75" stroke-linecap="round"/>
+    <path d="M56 70c16 5 32 5 48 0" fill="none" stroke="#b07552" stroke-width="1.75" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <path d="M66 20h28v4c0 4-4 6-4 12 0 8 26 16 26 38 0 16-12 26-32 26S52 90 52 74c0-22 26-30 26-38 0-6-4-8-4-12Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+  <ellipse cx="80" cy="21" rx="12" ry="2.5" fill="#6f8f98"/>
+  <path d="M120 84h34c0 10-7 16-17 16s-17-6-17-16Z" fill="var(--snow)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M122.5 90h29" stroke="var(--sky-deep)" stroke-width="3"/>
+  <path d="M118 84h38" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+</svg>

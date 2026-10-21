@@ -1,0 +1,12 @@
+<svg class="motif motif--betty" viewBox="0 0 150 84" aria-hidden="true">
+  <path d="M8 44V16c0-6 4-10 10-10h82c4 0 7 2 9 5l19 26c2 3 4 5 4 9v2Z" fill="var(--snow)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M8 44h124v18c0 3-2 5-5 5H13c-3 0-5-2-5-5Z" fill="var(--betty)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="18" y="16" width="22" height="16" rx="3" fill="var(--glass)" stroke="var(--ink)" stroke-width="1.75"/>
+  <rect x="46" y="16" width="22" height="16" rx="3" fill="var(--glass)" stroke="var(--ink)" stroke-width="1.75"/>
+  <path d="M104 14h4l17 22h-21Z" fill="var(--glass)" stroke="var(--ink)" stroke-width="1.75" stroke-linejoin="round"/>
+  <path d="M76 16v28" stroke="var(--ink)" stroke-width="1.5"/>
+  <path d="M84 30h6" stroke="var(--ink)" stroke-width="1.75" stroke-linecap="round"/>
+  <rect x="127" y="48" width="7" height="5" rx="1.5" fill="var(--wheat)"/>
+  <circle cx="34" cy="68" r="10" fill="var(--ink)"/><circle cx="34" cy="68" r="4" fill="var(--snow)"/>
+  <circle cx="110" cy="68" r="10" fill="var(--ink)"/><circle cx="110" cy="68" r="4" fill="var(--snow)"/>
+</svg>

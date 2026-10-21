@@ -1,0 +1,52 @@
+<svg class="motif" viewBox="0 18 170 92" aria-hidden="true">
+  <defs>
+    <clipPath id="george-body">
+      <path d="M14 96c-4-22 12-38 38-38 24 0 36 14 36 28 0 8-4 12-12 12H20c-4 0-6-1-6-2Z"/>
+      <circle cx="28" cy="74" r="14"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="86" cy="101" rx="78" ry="6" fill="var(--hill-1)"/>
+
+  <!-- Ellie: fluffy white ragdoll, curled up asleep behind George -->
+  <g transform="translate(70 -2)">
+    <path d="M90 92c10 10-30 12-56 8" fill="none" stroke="var(--ink)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M90 92c10 10-30 12-56 8" fill="none" stroke="var(--snow)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M16 64l-1-14 11 8M33 58l9-9 1 14" fill="var(--snow)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M18 60l0-6 4 4M35 58l4-4v6" fill="#f2c6d4"/>
+    <!-- head and body share one outline -->
+    <g stroke="var(--ink)" stroke-width="4" stroke-linejoin="round" fill="var(--ink)">
+      <path d="M14 98c-4-24 14-42 40-42 26 0 38 16 38 30 0 8-4 12-12 12H20c-4 0-6 0-6 0Z"/>
+      <circle cx="28" cy="72" r="15"/>
+    </g>
+    <g fill="var(--snow)">
+      <path d="M14 98c-4-24 14-42 40-42 26 0 38 16 38 30 0 8-4 12-12 12H20c-4 0-6 0-6 0Z"/>
+      <circle cx="28" cy="72" r="15"/>
+    </g>
+    <path d="M50 64q4 4 8 0M62 70q4 4 8 0M44 76q4 4 8 0M14 80q3 4 7 3M15 86q4 3 8 1" fill="none" stroke="#c9d3cc" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M19 71q3 2 6 0M30 71q3 2 6 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M26.2 76h3.6l-1.8 2Z" fill="#e59ab3"/>
+  </g>
+
+  <!-- George: skinny rescue, mostly white with black cow-like patches, asleep -->
+  <path d="M84 92c10 10-26 12-50 8" fill="none" stroke="var(--ink)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M84 92c10 10-26 12-50 8" fill="none" stroke="var(--snow)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M84 92c6 6 2 9-4 10" fill="none" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M17 66l-2-13 10 7" fill="var(--ink)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M31 60l9-9 2 13" fill="var(--snow)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- head and body share one outline -->
+  <g stroke="var(--ink)" stroke-width="4" stroke-linejoin="round" fill="var(--ink)">
+    <path d="M14 96c-4-22 12-38 38-38 24 0 36 14 36 28 0 8-4 12-12 12H20c-4 0-6-1-6-2Z"/>
+    <circle cx="28" cy="74" r="14"/>
+  </g>
+  <g fill="var(--snow)">
+    <path d="M14 96c-4-22 12-38 38-38 24 0 36 14 36 28 0 8-4 12-12 12H20c-4 0-6-1-6-2Z"/>
+    <circle cx="28" cy="74" r="14"/>
+  </g>
+  <g clip-path="url(#george-body)" fill="var(--ink)">
+    <path d="M44 56c12-4 28 0 32 10-6 6-16 2-22 8-8-2-12-10-10-18Z"/>
+    <path d="M72 80c6-3 16-1 18 8-6 5-16 4-18-8Z"/>
+    <path d="M12 62c6-4 14-4 18 0-2 7-10 10-18 8Z"/>
+  </g>
+  <path d="M20 74q3 2 6 0M30 74q3 2 6 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M26.4 79h3.2l-1.6 1.8Z" fill="#e59ab3"/>
+</svg>

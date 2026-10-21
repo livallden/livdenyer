@@ -1,0 +1,20 @@
+<svg class="motif" viewBox="0 0 160 110" aria-hidden="true">
+  <defs>
+    <clipPath id="yarn-ball"><circle cx="70" cy="66" r="31"/></clipPath>
+  </defs>
+  <ellipse cx="82" cy="102" rx="62" ry="5" fill="var(--hill-1)"/>
+  <line x1="48" y1="16" x2="82" y2="70" stroke="var(--wheat-deep)" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="102" y1="14" x2="64" y2="72" stroke="var(--wheat-deep)" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="47" cy="14" r="4.5" fill="var(--wheat)" stroke="var(--ink)" stroke-width="1.5"/>
+  <circle cx="103" cy="12" r="4.5" fill="var(--wheat)" stroke="var(--ink)" stroke-width="1.5"/>
+  <circle cx="70" cy="66" r="31" fill="var(--poppy)"/>
+  <g clip-path="url(#yarn-ball)" fill="none" stroke="#9c3a26" stroke-width="2.2" stroke-linecap="round">
+    <path d="M36 54c14-12 34-20 56-20M36 66c18-16 40-24 64-24M38 78c20-20 44-30 68-30M44 90c22-22 46-34 66-36"/>
+    <path d="M62 100c4-18 16-34 36-46M76 102c2-14 10-26 24-36"/>
+  </g>
+  <path d="M48 48c6-8 14-12 22-13" fill="none" stroke="var(--snow)" stroke-width="2.5" stroke-linecap="round" opacity=".4"/>
+  <circle cx="70" cy="66" r="31" fill="none" stroke="var(--ink)" stroke-width="2"/>
+  <path d="M98 80c10 6 12 16 26 18s16-4 22-2" fill="none" stroke="var(--poppy)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M110 101l34-10" stroke="var(--betty)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M144 91c3-1 4 2 2 4" fill="none" stroke="var(--betty)" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

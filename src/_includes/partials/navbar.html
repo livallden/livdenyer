@@ -1,9 +1,17 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
+{% if path == 'home' %}
+<header>
+    <nav class="home-nav wrap" aria-label="Main">
+        <a href="/" class="home-nav__name">{{settings.name}}</a>
+        <a href="https://linkedin.com/in/odenyer" class="home-nav__link" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+</header>
+{% else %}
+<div class="w-full">
     <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
         <!--Logo etc-->
         <div class="flex items-center">
             <a href="/" class="font-bold text-lg">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Liv Denyer</span></a>
+                <span>{{settings.name}}</span></a>
         </div>
 
         <!--Toggle button (hidden on large screens)-->
@@ -31,3 +39,5 @@
         </div>
     </nav>
 </div>
+
+{% endif %}
