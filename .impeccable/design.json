@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T16:22:19+00:00",
+  "title": "Design System: Liv Allden",
+  "extensions": {
+    "colorMeta": {
+      "betty-deep": {
+        "role": "primary",
+        "displayName": "Betty Green Deep",
+        "canonical": "#2f6e48",
+        "oklch": "oklch(48.6% 0.090 154.6)",
+        "tonalRamp": [
+          "#001400",
+          "#002f0e",
+          "#044d29",
+          "#2d6c46",
+          "#529068",
+          "#76b58c",
+          "#9cdcb1",
+          "#bfffd4"
+        ]
+      },
+      "betty": {
+        "role": "primary",
+        "displayName": "Betty Green",
+        "canonical": "#3e8a5c",
+        "oklch": "oklch(57.2% 0.104 154.7)",
+        "tonalRamp": [
+          "#001500",
+          "#003108",
+          "#004f25",
+          "#1e6e42",
+          "#479264",
+          "#6cb887",
+          "#92dfac",
+          "#b6ffd0"
+        ]
+      },
+      "wheat": {
+        "role": "secondary",
+        "displayName": "Wheat Ochre",
+        "canonical": "#d39a3a",
+        "oklch": "oklch(72.4% 0.129 76.8)",
+        "tonalRamp": [
+          "#250000",
+          "#441200",
+          "#643100",
+          "#855100",
+          "#ab7400",
+          "#d29938",
+          "#fabf62",
+          "#ffe48f"
+        ]
+      },
+      "wheat-deep": {
+        "role": "secondary",
+        "displayName": "Wheat Deep",
+        "canonical": "#a8731f",
+        "oklch": "oklch(59.6% 0.115 73.5)",
+        "tonalRamp": [
+          "#240000",
+          "#431400",
+          "#633200",
+          "#845100",
+          "#a97420",
+          "#d0994b",
+          "#f8bf72",
+          "#ffe395"
+        ]
+      },
+      "sky": {
+        "role": "neutral",
+        "displayName": "Morning Sky",
+        "canonical": "#e5eef0",
+        "oklch": "oklch(94.3% 0.010 212.5)",
+        "tonalRamp": [
+          "#070c0e",
+          "#1f2527",
+          "#3a4143",
+          "#585f61",
+          "#7a8284",
+          "#9ea6a8",
+          "#c4ccce",
+          "#e7f0f2"
+        ]
+      },
+      "meadow": {
+        "role": "neutral",
+        "displayName": "Meadow",
+        "canonical": "#e3ebdd",
+        "oklch": "oklch(93.0% 0.020 131.5)",
+        "tonalRamp": [
+          "#080d05",
+          "#20261c",
+          "#3c4237",
+          "#596054",
+          "#7c8376",
+          "#a0a79a",
+          "#c6cec0",
+          "#eaf2e4"
+        ]
+      },
+      "hill-1": {
+        "role": "neutral",
+        "displayName": "Far Hill",
+        "canonical": "#d0e0cc",
+        "oklch": "oklch(88.9% 0.032 139.4)",
+        "tonalRamp": [
+          "#050e03",
+          "#1c2819",
+          "#374434",
+          "#546251",
+          "#778573",
+          "#9baa97",
+          "#c0d0bc",
+          "#e4f4e0"
+        ]
+      },
+      "hill-2": {
+        "role": "neutral",
+        "displayName": "Middle Hill",
+        "canonical": "#b5cfae",
+        "oklch": "oklch(82.6% 0.053 139.1)",
+        "tonalRamp": [
+          "#011000",
+          "#162a10",
+          "#31472b",
+          "#4e6548",
+          "#70886a",
+          "#94ad8d",
+          "#b9d3b2",
+          "#ddf8d6"
+        ]
+      },
+      "hill-3": {
+        "role": "neutral",
+        "displayName": "Near Hill",
+        "canonical": "#97b991",
+        "oklch": "oklch(75.0% 0.067 140.9)",
+        "tonalRamp": [
+          "#001100",
+          "#0f2c0a",
+          "#2b4826",
+          "#486743",
+          "#6a8b65",
+          "#8eb088",
+          "#b3d6ad",
+          "#d7fad0"
+        ]
+      },
+      "hedge": {
+        "role": "neutral",
+        "displayName": "Hedgerow",
+        "canonical": "#5a8664",
+        "oklch": "oklch(57.8% 0.071 150.8)",
+        "tonalRamp": [
+          "#001200",
+          "#002d10",
+          "#1f4a2c",
+          "#3e6949",
+          "#608d6a",
+          "#84b28e",
+          "#a9d8b3",
+          "#cdfdd6"
+        ]
+      },
+      "lane": {
+        "role": "neutral",
+        "displayName": "Lane",
+        "canonical": "#ece9dc",
+        "oklch": "oklch(93.3% 0.018 96.1)",
+        "tonalRamp": [
+          "#0d0b04",
+          "#26241a",
+          "#424035",
+          "#605e53",
+          "#838075",
+          "#a8a599",
+          "#cecbbe",
+          "#f2efe2"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Hedgerow Ink",
+        "canonical": "#213429",
+        "oklch": "oklch(30.5% 0.032 158.4)",
+        "tonalRamp": [
+          "#010f06",
+          "#16291e",
+          "#314539",
+          "#4f6357",
+          "#718679",
+          "#95ab9d",
+          "#bad1c3",
+          "#def5e7"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#4a5d50",
+        "oklch": "oklch(45.8% 0.031 155.1)",
+        "tonalRamp": [
+          "#020f06",
+          "#17291d",
+          "#334539",
+          "#506356",
+          "#728678",
+          "#96ab9c",
+          "#bbd1c2",
+          "#dff5e5"
+        ]
+      },
+      "snow": {
+        "role": "neutral",
+        "displayName": "Snow",
+        "canonical": "#fbfcfa",
+        "oklch": "oklch(99.0% 0.003 128.5)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242423",
+          "#3f403e",
+          "#5d5e5c",
+          "#80807f",
+          "#a4a5a3",
+          "#cacbc9",
+          "#eeefed"
+        ]
+      },
+      "glass": {
+        "role": "neutral",
+        "displayName": "Glass",
+        "canonical": "#cfe2e6",
+        "oklch": "oklch(90.0% 0.021 211.8)",
+        "tonalRamp": [
+          "#020d10",
+          "#18272a",
+          "#334346",
+          "#506164",
+          "#728487",
+          "#96a8ac",
+          "#bcced2",
+          "#dff3f7"
+        ]
+      },
+      "dusk": {
+        "role": "neutral",
+        "displayName": "Dusk",
+        "canonical": "#2c4636",
+        "oklch": "oklch(36.8% 0.042 156.6)",
+        "tonalRamp": [
+          "#001005",
+          "#112a1b",
+          "#2d4737",
+          "#4a6554",
+          "#6c8876",
+          "#90ad9a",
+          "#b5d3bf",
+          "#d9f8e3"
+        ]
+      },
+      "dusk-ink": {
+        "role": "neutral",
+        "displayName": "Dusk Ink",
+        "canonical": "#e9f0e6",
+        "oklch": "oklch(94.7% 0.015 136.1)",
+        "tonalRamp": [
+          "#080d07",
+          "#21261f",
+          "#3c423a",
+          "#5a6057",
+          "#7c8279",
+          "#a0a79e",
+          "#c6cdc3",
+          "#eaf1e7"
+        ]
+      },
+      "poppy": {
+        "role": "motif-only",
+        "displayName": "Poppy",
+        "canonical": "#c4553c",
+        "oklch": "oklch(58.7% 0.148 34.1)",
+        "tonalRamp": [
+          "#340000",
+          "#570000",
+          "#7b0900",
+          "#a0341b",
+          "#c95940",
+          "#f27f64",
+          "#ffa589",
+          "#ffd1b9"
+        ]
+      },
+      "clay": {
+        "role": "motif-only",
+        "displayName": "Clay",
+        "canonical": "#c98a64",
+        "oklch": "oklch(68.8% 0.093 51.7)",
+        "tonalRamp": [
+          "#250000",
+          "#441000",
+          "#652e03",
+          "#864d27",
+          "#ac704a",
+          "#d4946e",
+          "#fcba92",
+          "#ffddb5"
+        ]
+      },
+      "sky-deep": {
+        "role": "motif-only",
+        "displayName": "Sky Deep",
+        "canonical": "#9fc2cc",
+        "oklch": "oklch(79.2% 0.040 217.0)",
+        "tonalRamp": [
+          "#000f16",
+          "#072931",
+          "#25454e",
+          "#43636c",
+          "#658790",
+          "#89abb5",
+          "#aed2dc",
+          "#d2f6ff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Liv's name in the opening scene only."
+      },
+      "pitch": {
+        "displayName": "Pitch",
+        "purpose": "The one-line positioning statement, in Betty Green Deep."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Company names at each stop; fingerpost figures use the same face."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text; Literata 600 for role titles, italic for dates and asides."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Fingerpost captions and footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "portrait-lift",
+        "value": "0 6px 18px -8px rgba(33, 52, 41, 0.45)",
+        "purpose": "Round portrait photo."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 6px 16px -8px rgba(47, 110, 72, 0.7)",
+        "purpose": "Primary button at rest on light ground."
+      },
+      {
+        "name": "button-lift-hover",
+        "value": "0 10px 20px -10px rgba(47, 110, 72, 0.8)",
+        "purpose": "Primary button hover."
+      },
+      {
+        "name": "fingerpost",
+        "value": "0 1px 0 rgba(33, 52, 41, 0.08), 0 8px 18px -10px rgba(33, 52, 41, 0.35)",
+        "purpose": "White result boards beside each stop."
+      },
+      {
+        "name": "van-on-lane",
+        "value": "drop-shadow(0 4px 4px rgba(33, 52, 41, 0.25))",
+        "purpose": "Betty seen from above on the lane (filter, not box-shadow)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions and the opening settle."
+      },
+      {
+        "name": "button-transition",
+        "value": "0.3s",
+        "purpose": "Background, lift and shadow on button hover."
+      },
+      {
+        "name": "settle",
+        "value": "translateY(12px) to 0, 1.1s, staggered 60ms",
+        "purpose": "Opening scene text settles once on load; reduced-motion safe."
+      },
+      {
+        "name": "betty-sticky",
+        "value": "position: sticky; top: 45vh",
+        "purpose": "Betty drives down the lane as the career scrolls."
+      },
+      {
+        "name": "drive-in",
+        "value": "translateX(-60px) to 0 over scroll 0-400px",
+        "purpose": "Betty drives into the opening landscape (scroll-timeline, progressive)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "560px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      },
+      {
+        "name": "fingerpost-column",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The LinkedIn call to action on light ground.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.83v1.5h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.13v5.42h-4v-4.8c0-1.15-.02-2.62-1.6-2.62-1.6 0-1.84 1.25-1.84 2.54v4.88h-4v-11Z\"/></svg>Connect on LinkedIn</a>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-btn{display:inline-flex;align-items:center;gap:0.55rem;padding:0.75rem 1.35rem;border-radius:999px;font-family:'Literata',Georgia,serif;font-weight:600;font-size:1.0625rem;text-decoration:none;transition:background 0.3s var(--ease-out),transform 0.3s var(--ease-out),box-shadow 0.3s var(--ease-out);} .ds-btn svg{width:1.05rem;height:1.05rem;flex:none;} .ds-btn:focus-visible{outline:2px solid var(--betty);outline-offset:3px;} .ds-btn-primary{background:var(--betty-deep);color:var(--snow);box-shadow:0 6px 16px -8px rgba(47,110,72,0.7);} .ds-btn-primary:hover{background:#275c3c;transform:translateY(-1px);box-shadow:0 10px 20px -10px rgba(47,110,72,0.8);}"
+    },
+    {
+      "name": "Evening Button",
+      "kind": "button",
+      "refersTo": "button-evening",
+      "description": "The same call to action on the dusk band: wheat pill, ink text, no shadow.",
+      "html": "<div class=\"ds-dusk\"><a class=\"ds-btn ds-btn-evening\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.83v1.5h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.13v5.42h-4v-4.8c0-1.15-.02-2.62-1.6-2.62-1.6 0-1.84 1.25-1.84 2.54v4.88h-4v-11Z\"/></svg>Connect on LinkedIn</a></div>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-btn{display:inline-flex;align-items:center;gap:0.55rem;padding:0.75rem 1.35rem;border-radius:999px;font-family:'Literata',Georgia,serif;font-weight:600;font-size:1.0625rem;text-decoration:none;transition:background 0.3s var(--ease-out),transform 0.3s var(--ease-out),box-shadow 0.3s var(--ease-out);} .ds-btn svg{width:1.05rem;height:1.05rem;flex:none;} .ds-btn:focus-visible{outline:2px solid var(--betty);outline-offset:3px;} .ds-dusk{background:var(--dusk);padding:2rem;} .ds-btn-evening{background:var(--wheat);color:var(--ink);} .ds-btn-evening:hover{background:#e0ab4f;} .ds-btn-evening:focus-visible{outline-color:var(--wheat);}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Name at left in Young Serif, a plain LinkedIn link at right.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__name\" href=\"#\">Liv Allden</a><a class=\"ds-nav__link\" href=\"#\">LinkedIn</a></nav>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-nav{display:flex;align-items:baseline;justify-content:space-between;padding:1.5rem 1.25rem 1rem;background:var(--sky);color:var(--ink);font-family:'Literata',Georgia,serif;} .ds-nav__name{font-family:'Young Serif',Georgia,serif;font-size:1.25rem;color:inherit;text-decoration:none;} .ds-nav__link{font-size:1rem;color:inherit;text-decoration-color:var(--wheat);text-decoration-thickness:1.5px;text-underline-offset:0.2em;} .ds-nav__link:hover{text-decoration-color:var(--betty);} .ds-nav a:focus-visible{outline:2px solid var(--betty);outline-offset:3px;border-radius:3px;}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "description": "Inline link: inherits text colour, wheat underline turning Betty green on hover.",
+      "html": "<p class=\"ds-p\">Now I'm at <a class=\"ds-link\" href=\"#\">tiney</a>, England's largest childminder agency.</p>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-p{font-family:'Literata',Georgia,serif;font-size:1.0625rem;line-height:1.65;color:var(--ink-soft);background:var(--sky);padding:1rem;} .ds-link{color:inherit;text-decoration-color:var(--wheat);text-decoration-thickness:1.5px;text-underline-offset:0.2em;} .ds-link:hover{text-decoration-color:var(--betty);} .ds-link:focus-visible{outline:2px solid var(--betty);outline-offset:3px;border-radius:3px;}"
+    },
+    {
+      "name": "Fingerpost",
+      "kind": "custom",
+      "refersTo": "fingerpost",
+      "description": "White board beside a stop carrying its headline result, with a pointed end toward the lane and a wooden post.",
+      "html": "<div class=\"ds-verge\"><aside class=\"ds-sign\"><p class=\"ds-sign__figure\">0 → 65k users</p><p class=\"ds-sign__label\">Flux Offers, launched inside three months</p></aside></div>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-verge{background:var(--meadow);padding:2rem 2rem 4rem 3rem;} .ds-sign{position:relative;max-width:17rem;padding:0.9rem 1.25rem 1rem;background:var(--snow);border-radius:6px;box-shadow:0 1px 0 rgba(33,52,41,0.08),0 8px 18px -10px rgba(33,52,41,0.35);} .ds-sign::before{content:'';position:absolute;right:100%;top:50%;translate:0 -50%;border:0.9rem solid transparent;border-right-color:var(--snow);border-left-width:0;} .ds-sign::after{content:'';position:absolute;left:1.6rem;top:100%;width:5px;height:2.75rem;border-radius:0 0 2px 2px;background:var(--wheat-deep);} .ds-sign p{margin:0;} .ds-sign__figure{font-family:'Young Serif',Georgia,serif;font-size:2rem;line-height:1.15;color:var(--betty-deep);} .ds-sign__label{margin-top:0.3rem !important;font-family:'Literata',Georgia,serif;font-size:0.9rem;line-height:1.45;color:var(--ink-soft);}"
+    },
+    {
+      "name": "Stop on the Lane",
+      "kind": "custom",
+      "refersTo": "lane",
+      "description": "One role: lane with milestone at left, Young Serif company, role lines, leaf-bulleted results.",
+      "html": "<div class=\"ds-journey\"><div class=\"ds-road\"></div><article class=\"ds-stop\"><h3 class=\"ds-stop__company\">Tabeo <span>2024 – 2025</span></h3><p class=\"ds-stop__role\">Senior Product Manager <span>April 2024 – March 2025</span></p><ul><li>Launched Plans and scaled it to 100+ merchants</li><li>Led the Stripe direct debit integration</li></ul></article></div>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-journey{position:relative;padding:1.5rem 1.5rem 2rem 5rem;background:var(--meadow);color:var(--ink);font-family:'Literata',Georgia,serif;font-size:1.0625rem;line-height:1.65;} .ds-road{position:absolute;top:0;bottom:0;left:1.25rem;width:2.75rem;border:solid var(--hill-2);border-width:0 5px;background:linear-gradient(var(--snow),var(--snow)) center/2px 100% no-repeat,var(--lane);background-clip:padding-box;} .ds-stop{position:relative;} .ds-stop::before{content:'';position:absolute;top:0.45rem;left:calc(-5rem + 1.25rem + 1.375rem - 0.55rem);width:1.1rem;height:1.1rem;border-radius:50%;background:var(--snow);border:3px solid var(--wheat);box-shadow:0 0 0 4px var(--lane);box-sizing:border-box;} .ds-stop__company{font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:2.1rem;line-height:1.15;margin:0 0 0.2rem;} .ds-stop__role{font-weight:600;margin:0;} .ds-stop__role span{font-weight:400;font-style:italic;color:var(--ink-soft);} .ds-stop ul{list-style:none;margin:0.9rem 0 0;padding:0;display:grid;gap:0.5rem;} .ds-stop li{position:relative;padding-left:1.4rem;} .ds-stop li::before{content:'';position:absolute;left:0;top:0.62em;width:0.62rem;height:0.42rem;background:var(--hedge);border-radius:0 100% 0 100%;transform:rotate(-20deg);}"
+    },
+    {
+      "name": "Portrait",
+      "kind": "custom",
+      "refersTo": "portrait",
+      "description": "Small round photo with a snow ring and a soft ink shadow, above the name.",
+      "html": "<div class=\"ds-sky\"><div class=\"ds-photo\"></div><h1 class=\"ds-name\">Liv Allden</h1><p class=\"ds-pitch\">Product leader for early-stage, mission-led startups.</p></div>",
+      "css": ":host{--sky:#e5eef0;--meadow:#e3ebdd;--hill-2:#b5cfae;--hill-3:#97b991;--hedge:#5a8664;--lane:#ece9dc;--ink:#213429;--ink-soft:#4a5d50;--betty:#3e8a5c;--betty-deep:#2f6e48;--snow:#fbfcfa;--wheat:#d39a3a;--wheat-deep:#a8731f;--dusk:#2c4636;--dusk-ink:#e9f0e6;--ease-out:cubic-bezier(0.16,1,0.3,1);} .ds-sky{background:var(--sky);padding:2rem;color:var(--ink);} .ds-photo{width:5.5rem;height:5.5rem;border-radius:50%;background:var(--hill-2);border:3px solid var(--snow);box-shadow:0 6px 18px -8px rgba(33,52,41,0.45);margin-bottom:1.5rem;} .ds-name{font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:4rem;line-height:0.98;letter-spacing:-0.02em;margin:0 0 1rem;} .ds-pitch{font-family:'Young Serif',Georgia,serif;font-size:1.5rem;line-height:1.3;color:var(--betty-deep);margin:0;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Country Lane",
+    "overview": "The page is a slow drive through the countryside on a clear morning. The ground starts as pale sky (never cream), eases into meadow green as you scroll, and ends in a dark-green evening. Content sits directly on that ground with lots of air: no cards, no outlined boxes, no grid of tiles. The only objects that stand up off the land are things that belong in a lane: the lane itself, milestones beside it, white fingerposts carrying each role's headline result, and Betty the van driving down it.\n\nIllustration is flat and quiet: softly layered hills in three greens, and small line drawings (a 2px hedgerow-ink outline over flat fills) of the things Liv loves: books, pottery, yarn, George and Ellie, and Betty. Type is all serif: Young Serif carries names, headings and figures; Literata carries reading text. The effect should be calm, warm and personal, while every title, company, date and number stays easy to scan.\n\nThe world was chosen to replace an earlier, rejected \"granny-square blanket\" direction because that one was too busy. Calm and simple win over decoration.",
+    "keyCharacteristics": [
+      "Sky-to-meadow vertical gradient ground; a dark dusk band closes the page.",
+      "All-serif type: Young Serif display at weight 400, Literata body.",
+      "No containers around content; depth comes from layered hills and a few soft-shadowed objects.",
+      "Betty green carries the action; one wheat-ochre accent marks links, milestones and the evening button.",
+      "Flat line-drawn motifs in hedgerow ink with flat fills.",
+      "One signature interaction: Betty, seen from above, sticks to the lane as you scroll the career."
+    ],
+    "rules": [
+      {
+        "name": "The Motif-Only Rule",
+        "body": "Poppy, clay, sky-deep and the cats' blues and pinks are illustration fills. They never colour text, buttons, links, rules or backgrounds.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Wheat Rule",
+        "body": "Wheat is the only warm accent in the UI. It marks links, milestones and the evening call to action, and nothing else competes with it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never Cream Rule",
+        "body": "The ground is sky and meadow. Warm paper, cream or beige grounds are not part of this world.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Weight Display Rule",
+        "body": "Young Serif is only ever set at 400. Hierarchy comes from size and colour, never bold display.",
+        "section": "typography"
+      },
+      {
+        "name": "The Book Italic Rule",
+        "body": "Italic Literata in soft ink is the voice for secondary asides: dates beside roles and the \"open to conversations\" line. It never carries a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Objects Only Rule",
+        "body": "Only things that exist in the lane (photo, button, fingerpost, van) get a shadow. Text blocks, sections and lists never do.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** set content directly on the sky and meadow ground, separated by air (clamp(4rem, 9vw, 7rem) between sections).",
+      "**Do** use Young Serif at 400 for names, headings, company names and figures, and Literata for everything read.",
+      "**Do** keep Betty Green Deep for the primary action and results, and wheat as the single warm UI accent.",
+      "**Do** draw new motifs as 2px hedgerow-ink outlines over flat fills taken from the palette.",
+      "**Do** put a role's headline number on a fingerpost, not in a styled callout inside the prose.",
+      "**Do** keep all motion inside prefers-reduced-motion: no-preference."
+    ],
+    "donts": [
+      "**Don't** put content in cards, bordered boxes or tile grids; the fingerpost is the only board in the world.",
+      "**Don't** use poppy, clay, sky-deep or the cats' blues and pinks outside illustrations.",
+      "**Don't** use cream, beige or warm-paper grounds.",
+      "**Don't** bold Young Serif or set display type in a sans or system face.",
+      "**Don't** add hard-edged, offset or black drop shadows; drop shadows are soft, downward, ink- or green-tinted, and only on lane objects. (The lane's 5px verges are borders, and the milestone's lane halo is a zero-offset spread ring drawing the land, not a shadow.)",
+      "**Don't** bring back granny-square, patchwork or blanket patterns."
+    ]
+  }
+}

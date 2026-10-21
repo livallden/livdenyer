@@ -30,13 +30,24 @@ module.exports = function (eleventyConfig) {
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
+    "./node_modules/@fontsource/young-serif/files/young-serif-latin-400-normal.woff2":
+      "./static/fonts/young-serif.woff2",
+    "./node_modules/@fontsource-variable/literata/files/literata-latin-standard-normal.woff2":
+      "./static/fonts/literata.woff2",
+    "./node_modules/@fontsource-variable/literata/files/literata-latin-standard-italic.woff2":
+      "./static/fonts/literata-italic.woff2",
   });
+
+  // Current year, for the footer
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/favicon.svg");
+  eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png");
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

@@ -10,13 +10,16 @@
     {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
+    <link rel="icon" href="/favicon.ico" sizes="32x32"/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body>
+  <body class="{{ 'home-page' if path == 'home' }}">
     {% include "./partials/navbar.html" %}
 
     {{ content | safe }}

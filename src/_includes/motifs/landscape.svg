@@ -1,0 +1,97 @@
+<svg class="landscape" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+    <clipPath id="fence-george">
+      <path d="M30 70c-14 0-20-8-20-20 0-10 6-17 12-20-4-3-6-8-6-13l-1-12 8 7c2-1 5-1 7-1s5 0 7 1l8-7-1 12c0 5-2 10-6 13 6 3 12 10 12 20 0 12-6 20-20 20Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- the sky follows the visitor's time of day (set on <html data-daypart>) -->
+  <g class="sky-sun"><g class="sky-rise"><circle class="sun-glow" r="54"/><circle class="sun-disc" r="24"/></g></g>
+  <g class="sky-moon"><g class="sky-rise">
+    <path d="M14-22a26 26 0 1 0 8 40 21 21 0 1 1-8-40Z" fill="#f4f1e2" stroke="#b9bfcf" stroke-width="1.5"/>
+  </g></g>
+  <g class="sky-stars">
+    <circle cx="880" cy="60" r="1.8"/><circle cx="960" cy="110" r="1.4"/><circle cx="1110" cy="40" r="2"/>
+    <circle cx="1210" cy="150" r="1.4"/><circle cx="1360" cy="120" r="1.8"/><circle cx="820" cy="150" r="1.2"/>
+  </g>
+
+  <g class="layer-far">
+    <g fill="var(--snow)" opacity=".75">
+      <g class="cloud cloud-far"><ellipse cx="1010" cy="70" rx="70" ry="16"/><ellipse cx="1050" cy="58" rx="40" ry="18"/></g>
+      <g class="cloud cloud-near"><ellipse cx="1260" cy="128" rx="54" ry="12"/><ellipse cx="1286" cy="118" rx="28" ry="13"/></g>
+    </g>
+    <path d="M1120 150q8-8 16 0q8-8 16 0M1170 170q6-6 12 0q6-6 12 0" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linecap="round"/>
+    <path class="far-hill" d="M640 300C820 250 960 150 1110 168s250 0 330-30V520H640Z"/>
+  </g>
+  <g transform="translate(0 160)">
+    <g class="layer-back">
+      <path d="M0 176C170 132 330 150 520 128S860 84 1060 112s280-26 380 6V360H0Z" fill="var(--hill-1)"/>
+      <g fill="var(--hedge)">
+        <circle cx="1096" cy="96" r="15"/><rect x="1094" y="104" width="4" height="16"/>
+        <circle cx="1130" cy="102" r="11"/><rect x="1128" y="108" width="4" height="12"/>
+        <circle cx="236" cy="138" r="12"/><rect x="234" y="144" width="4" height="12"/>
+      </g>
+    </g>
+    <g class="layer-mid">
+      <path d="M0 236C160 196 350 212 530 202s300-50 500-26 300 2 410 18V360H0Z" fill="var(--hill-2)"/>
+      <path d="M540 214c120 4 260-16 400-28M80 244c120-24 260-26 380-18" fill="none" stroke="var(--hill-3)" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 9"/>
+    </g>
+    <path d="M0 296c230-34 470-20 700-26s470-36 740-8V360H0Z" fill="var(--hill-3)"/>
+    <path id="lane-verge" d="M1004 178c-40 14-120 34-210 54s-210 46-260 70-70 44-80 58h96c8-14 30-32 76-50s170-46 270-70 120-46 130-60Z" fill="var(--hill-2)"/>
+    <path id="lane" d="M1004 178c-40 14-120 34-210 54s-210 46-260 70-70 44-80 58h96c8-14 30-32 76-50s170-46 270-70 120-46 130-60Z" fill="var(--lane)"/>
+    <path id="lane-dash" d="M1006 182c-60 24-200 52-300 76s-170 52-180 102" fill="none" stroke="var(--snow)" stroke-width="2" stroke-dasharray="8 10" opacity=".8"/>
+    <g class="van"><g id="hero-van" transform="translate(846 196) scale(-.42 .42)">
+      <path d="M8 44V16c0-6 4-10 10-10h82c4 0 7 2 9 5l19 26c2 3 4 5 4 9v2Z" fill="var(--snow)" stroke="var(--ink)" stroke-width="3"/>
+      <path d="M8 44h124v18c0 3-2 5-5 5H13c-3 0-5-2-5-5Z" fill="var(--betty)" stroke="var(--ink)" stroke-width="3"/>
+      <rect x="18" y="16" width="22" height="16" rx="3" fill="var(--glass)" stroke="var(--ink)" stroke-width="2.5"/>
+      <rect x="46" y="16" width="22" height="16" rx="3" fill="var(--glass)" stroke="var(--ink)" stroke-width="2.5"/>
+      <path d="M104 14h4l17 22h-21Z" fill="var(--glass)" stroke="var(--ink)" stroke-width="2.5"/>
+      <circle cx="34" cy="68" r="10" fill="var(--ink)"/><circle cx="110" cy="68" r="10" fill="var(--ink)"/>
+    </g></g>
+    <g transform="translate(1050 0)"><g class="fence-cat">
+      <g class="fence" stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
+        <path d="M70 330V262M150 322V258M230 316V256"/>
+        <path d="M62 276l178-12M62 300l178-10"/>
+      </g>
+      <!-- George, mostly white with black cow-like patches -->
+      <g transform="translate(52 221) scale(.75)">
+        <path class="tail" d="M49 64c8 0 12 8 8 20" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/>
+        <path class="tail" d="M49 64c8 0 12 8 8 20" fill="none" stroke="var(--snow)" stroke-width="3" stroke-linecap="round" stroke-dasharray="22 100"/>
+        <path d="M30 70c-14 0-20-8-20-20 0-10 6-17 12-20-4-3-6-8-6-13l-1-12 8 7c2-1 5-1 7-1s5 0 7 1l8-7-1 12c0 5-2 10-6 13 6 3 12 10 12 20 0 12-6 20-20 20Z" fill="var(--snow)"/>
+        <g clip-path="url(#fence-george)" fill="var(--ink)">
+          <path d="M8 0h22v14c-6 4-14 4-22 0Z"/>
+          <path d="M34 36c8-2 16 4 16 12-8 4-16 0-16-12Z"/>
+        </g>
+        <path d="M30 70c-14 0-20-8-20-20 0-10 6-17 12-20-4-3-6-8-6-13l-1-12 8 7c2-1 5-1 7-1s5 0 7 1l8-7-1 12c0 5-2 10-6 13 6 3 12 10 12 20 0 12-6 20-20 20Z" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <!-- Ellie, a fluffy white ragdoll, standing on the top rail with her tail up -->
+      <g class="ellie"><g>
+        <g class="ellie__tail">
+          <path d="M-20-20C-34-30-34-52-22-60c4-3 9 0 7 5" fill="none" stroke="var(--ink)" stroke-width="10" stroke-linecap="round"/>
+          <path d="M-20-20C-34-30-34-52-22-60c4-3 9 0 7 5" fill="none" stroke="var(--snow)" stroke-width="6.5" stroke-linecap="round"/>
+        </g>
+        <g stroke-linecap="round">
+          <path d="M-14-12V0M16-12V0" stroke="var(--ink)" stroke-width="6"/>
+          <path d="M-14-12V0M16-12V0" stroke="var(--snow)" stroke-width="3"/>
+        </g>
+        <g stroke-linecap="round">
+          <path d="M-8-12V0M22-12V0" stroke="var(--ink)" stroke-width="6"/>
+          <path d="M-8-12V0M22-12V0" stroke="var(--snow)" stroke-width="3"/>
+        </g>
+        <path d="M17-33l2-12 6 8M28-37l6-9 1 12" fill="var(--snow)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M19-37l1-5 3 3M30-38l3-4v5" fill="#f2c6d4"/>
+        <g stroke="var(--ink)" stroke-width="4" fill="var(--ink)" stroke-linejoin="round">
+          <ellipse cx="0" cy="-19" rx="25" ry="12"/>
+          <circle cx="25" cy="-28" r="10.5"/>
+        </g>
+        <g fill="var(--snow)">
+          <ellipse cx="0" cy="-19" rx="25" ry="12"/>
+          <circle cx="25" cy="-28" r="10.5"/>
+        </g>
+        <path d="M-6-26q4 3 8 0M6-24q4 3 8 0M14-17q3 3 6 0" fill="none" stroke="#c9d3cc" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="29" cy="-30" rx="1.9" ry="1.6" fill="#3f7fcf"/>
+        <path d="M34.5-26.5l1.5 1.4-2 .6Z" fill="#e59ab3"/>
+      </g></g>
+    </g></g>
+  </g>
+</svg>
