@@ -25,7 +25,7 @@ Visitors read on desktop between meetings or on a phone from a LinkedIn link. Th
 - There's a `/blog` route with no posts.
 
 ## Brand Commitments
-- Name shown as Liv Allden.
+- Name shown as Liv Allden. Her maiden name (née Denyer) appears only in the page title and meta description, not on the page, so people searching for Liv Denyer still find her.
 - CV content stays as written: job titles, dates, companies and descriptions match Liv's current CV.
 - The site is strongly themed around Liv's personality and says more about who she is, not just the CV.
 
