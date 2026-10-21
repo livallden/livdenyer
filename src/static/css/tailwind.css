@@ -374,6 +374,8 @@ body pre[class*="language-"] {
 
 .landscape {
   display: block;
+  /* the hills carry on past the drawing's edges on very wide screens */
+  overflow: visible;
   width: 100%;
   height: clamp(260px, 36vw, 520px);
   margin-top: clamp(-14rem, -16vw, -2rem);
@@ -731,7 +733,8 @@ body pre[class*="language-"] {
   display: block;
   width: 100%;
   height: clamp(60px, 8vw, 110px);
-  background: var(--meadow);
+  background: linear-gradient(to bottom, var(--meadow) 96%, var(--dusk) 96%);
+  overflow: visible;
 }
 
 .evening__inner {
@@ -1160,4 +1163,6 @@ html {
   .road__van { width: 1.6rem; }
   .stop::before { left: calc(-1 * var(--indent) + var(--lane-x) + 1.125rem - 0.55rem); }
   .thing .motif { height: 6rem; }
+  .evening__moon { top: 0.5rem; right: 1.25rem; width: 2rem; }
+  .evening__inner { padding-top: 3.5rem; }
 }

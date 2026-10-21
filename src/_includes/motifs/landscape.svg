@@ -21,11 +21,11 @@
       <g class="cloud cloud-near"><ellipse cx="1260" cy="128" rx="54" ry="12"/><ellipse cx="1286" cy="118" rx="28" ry="13"/></g>
     </g>
     <path d="M1120 150q8-8 16 0q8-8 16 0M1170 170q6-6 12 0q6-6 12 0" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linecap="round"/>
-    <path class="far-hill" d="M640 300C820 250 960 150 1110 168s250 0 330-30V520H640Z"/>
+    <path class="far-hill" d="M640 300C820 250 960 150 1110 168s250 0 330-30c400-30 800 10 1600-10V520H640Z"/>
   </g>
   <g transform="translate(0 160)">
     <g class="layer-back">
-      <path d="M0 176C170 132 330 150 520 128S860 84 1060 112s280-26 380 6V360H0Z" fill="var(--hill-1)"/>
+      <path d="M-1600 160C-1000 120-500 190 0 176C170 132 330 150 520 128S860 84 1060 112s280-26 380 6c500 32 1000-40 1600-10V360H-1600Z" fill="var(--hill-1)"/>
       <g fill="var(--hedge)">
         <circle cx="1096" cy="96" r="15"/><rect x="1094" y="104" width="4" height="16"/>
         <circle cx="1130" cy="102" r="11"/><rect x="1128" y="108" width="4" height="12"/>
@@ -33,10 +33,10 @@
       </g>
     </g>
     <g class="layer-mid">
-      <path d="M0 236C160 196 350 212 530 202s300-50 500-26 300 2 410 18V360H0Z" fill="var(--hill-2)"/>
+      <path d="M-1600 226C-1000 250-500 200 0 236C160 196 350 212 530 202s300-50 500-26 300 2 410 18c500 30 1000-30 1600 0V360H-1600Z" fill="var(--hill-2)"/>
       <path d="M540 214c120 4 260-16 400-28M80 244c120-24 260-26 380-18" fill="none" stroke="var(--hill-3)" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 9"/>
     </g>
-    <path d="M0 296c230-34 470-20 700-26s470-36 740-8V360H0Z" fill="var(--hill-3)"/>
+    <path d="M-1600 286C-1000 300-500 270 0 296c230-34 470-20 700-26s470-36 740-8c500 10 1000-20 1600 6V360H-1600Z" fill="var(--hill-3)"/>
     <path id="lane-verge" d="M1004 178c-40 14-120 34-210 54s-210 46-260 70-70 44-80 58h96c8-14 30-32 76-50s170-46 270-70 120-46 130-60Z" fill="var(--hill-2)"/>
     <path id="lane" d="M1004 178c-40 14-120 34-210 54s-210 46-260 70-70 44-80 58h96c8-14 30-32 76-50s170-46 270-70 120-46 130-60Z" fill="var(--lane)"/>
     <path id="lane-dash" d="M1006 182c-60 24-200 52-300 76s-170 52-180 102" fill="none" stroke="var(--snow)" stroke-width="2" stroke-dasharray="8 10" opacity=".8"/>
