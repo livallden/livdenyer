@@ -255,6 +255,9 @@ body pre[class*="language-"] {
 }
 
 .how {
+  /* tucks 2px up under the hills so no sub-pixel seam shows between them */
+  position: relative;
+  margin-top: -2px;
   background: var(--hill-3);
   color: var(--ink);
 }
