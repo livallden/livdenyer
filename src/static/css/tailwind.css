@@ -47,6 +47,98 @@ body pre[class*="language-"] {
   font-display: swap;
 }
 
+/* The palette is registered as typed colours, so switching the time of day
+   blends every colour (sky, hills, meadow, text) instead of swapping it. */
+@property --day-top {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e5eef0;
+}
+
+@property --day-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e5eef0;
+}
+
+@property --sky {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e5eef0;
+}
+
+@property --meadow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e3ebdd;
+}
+
+@property --hill-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #d0e0cc;
+}
+
+@property --hill-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #b5cfae;
+}
+
+@property --hill-3 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #97b991;
+}
+
+@property --hedge {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #5a8664;
+}
+
+@property --lane {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ece9dc;
+}
+
+@property --ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #213429;
+}
+
+@property --ink-soft {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #4a5d50;
+}
+
+@property --betty-deep {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2f6e48;
+}
+
+@property --wheat-deep {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #a8731f;
+}
+
+@property --dusk {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2c4636;
+}
+
+@property --dusk-ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e9f0e6;
+}
+
 .home-page {
   --sky: #e5eef0;
   --sky-deep: #9fc2cc;
@@ -77,13 +169,15 @@ body pre[class*="language-"] {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--ink);
-  background: linear-gradient(
-    to bottom,
-    var(--sky) 0,
-    var(--sky) 640px,
-    var(--meadow) 1400px,
-    var(--meadow) 100%
-  );
+  background:
+    linear-gradient(to bottom, var(--day-top), var(--day-mid) 45%, transparent 90%) top / 100% 900px no-repeat,
+    linear-gradient(
+      to bottom,
+      var(--sky) 0,
+      var(--sky) 640px,
+      var(--meadow) 1400px,
+      var(--meadow) 100%
+    );
   accent-color: var(--betty);
   caret-color: var(--betty);
   scrollbar-color: var(--hedge) var(--meadow);
@@ -134,6 +228,61 @@ body pre[class*="language-"] {
 
 .home-nav__link {
   font-size: 1rem;
+}
+
+.home-nav__right {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+/* a small set of drawn icons for choosing the time of day */
+.daypicker {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(251, 252, 250, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(33, 52, 41, 0.08);
+}
+
+.daypicker[hidden] {
+  display: none;
+}
+
+.daypicker button {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-soft);
+  transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.daypicker button:hover {
+  color: var(--ink);
+  background: rgba(251, 252, 250, 0.6);
+}
+
+.daypicker button[aria-pressed="true"] {
+  color: var(--betty-deep);
+  background: var(--snow);
+  box-shadow: 0 2px 6px -3px rgba(33, 52, 41, 0.4);
+}
+
+.daypicker svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 /* ------------------------------------------------------------------
@@ -317,7 +466,7 @@ body pre[class*="language-"] {
 
 .road {
   position: absolute;
-  top: -4px;
+  top: 0;
   bottom: 0;
   left: calc(var(--gutter) + var(--lane-x));
   width: 2.75rem;
@@ -632,52 +781,151 @@ body pre[class*="language-"] {
    Living landscape: the sky follows the visitor's time of day
    ------------------------------------------------------------------ */
 
-.landscape .sky-sun,
-.landscape .sky-moon,
+/* The sun and moon wait just below the hills and rise to their place for the
+   current time of day. Each has an outer layer for x and an inner layer for y,
+   eased differently, so a switch moves them in a gentle arc. */
+html {
+  --sun-x: 1420px;
+  --sun-y: 640px;
+  --moon-x: 1080px;
+  --moon-y: 640px;
+}
+
+.landscape .sky-sun { transform: translateX(var(--sun-x)); }
+.landscape .sky-sun > .sky-rise { transform: translateY(var(--sun-y)); }
+.landscape .sky-moon { transform: translateX(var(--moon-x)); }
+.landscape .sky-moon > .sky-rise { transform: translateY(var(--moon-y)); }
+
 .landscape .sky-stars {
-  display: none;
+  opacity: 0;
 }
 
 .landscape .sun-disc { fill: #f6d58a; }
 .landscape .sun-glow { fill: rgba(246, 213, 138, 0.28); }
 
-[data-daypart="morning"] .landscape .sky-sun {
-  display: inline;
-  transform: translate(1190px, 168px);
+[data-daypart="morning"] {
+  --sun-x: 1190px;
+  --sun-y: 168px;
 }
 
-[data-daypart="afternoon"] .scene {
-  background: linear-gradient(to bottom, #d6e8f2, transparent 70%);
+[data-daypart="afternoon"] {
+  --day-top: #d3e6f1;
+  --day-mid: #dde9f0;
+  --sun-x: 1240px;
+  --sun-y: 58px;
 }
 
-[data-daypart="afternoon"] .landscape .sky-sun {
-  display: inline;
-  transform: translate(1240px, 58px);
-}
-
-[data-daypart="evening"] .scene {
-  background: linear-gradient(to bottom, #f4d5bd 0%, #efe1d2 30%, transparent 80%);
-}
-
-[data-daypart="evening"] .landscape .sky-sun {
-  display: inline;
-  transform: translate(1352px, 152px);
+[data-daypart="evening"] {
+  --day-top: #f4d5bd;
+  --day-mid: #efe1d2;
+  --sun-x: 1352px;
+  --sun-y: 152px;
 }
 
 [data-daypart="evening"] .landscape .sun-disc { fill: #f0a35e; }
 [data-daypart="evening"] .landscape .sun-glow { fill: rgba(240, 163, 94, 0.3); }
 
-[data-daypart="night"] .scene {
-  background: linear-gradient(to bottom, #cdd4e6, transparent 75%);
+/* Night is a proper night mode: a navy sky over moonlit hills, with light text.
+   White things (Betty, the cats, fingerposts) stay white, and the illustrations
+   keep their dark outlines so they still read as drawings. */
+[data-daypart="night"] {
+  --day-top: #0b1524;
+  --day-mid: #12203a;
 }
 
-[data-daypart="night"] .landscape .sky-moon {
-  display: inline;
-  transform: translate(1230px, 80px);
+[data-daypart="night"] .home-page {
+  --sky: #12203a;
+  --meadow: #17262b;
+  --hill-1: #2a4140;
+  --hill-2: #233a35;
+  --hill-3: #1d322c;
+  --hedge: #7fae8a;
+  --lane: #bdbcb0;
+  --ink: #e9eef3;
+  --ink-soft: #b7c2cd;
+  --betty-deep: #2f6e48;
+  --wheat-deep: #e0b25f;
+  --dusk: #0d1828;
+  --dusk-ink: #dfe6ee;
+  scrollbar-color: var(--hedge) var(--meadow);
+}
+
+[data-daypart="night"] .scene__pitch {
+  color: #a6d6b3;
+}
+
+/* things drawn or printed on white always keep their daytime ink */
+.landscape,
+.motif,
+.road__van,
+.sign {
+  --ink: #213429;
+  --ink-soft: #4a5d50;
+  --wheat-deep: #a8731f;
+}
+
+.landscape {
+  --hedge: #5a8664;
+}
+
+[data-daypart="night"] .landscape {
+  --hedge: #1f3328;
+}
+
+[data-daypart="night"] .sign__figure {
+  color: #2f6e48;
+}
+
+/* the fence catches the moonlight */
+[data-daypart="night"] .landscape .fence {
+  stroke: #d6dde3;
+}
+
+[data-daypart="night"] .landscape .cloud {
+  opacity: 0.25;
+}
+
+[data-daypart="night"] .daypicker {
+  background: rgba(233, 238, 243, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(233, 238, 243, 0.15);
+}
+
+[data-daypart="night"] .daypicker button:hover {
+  background: rgba(233, 238, 243, 0.15);
+}
+
+[data-daypart="night"] .daypicker button[aria-pressed="true"] {
+  background: #e9eef3;
+  color: #12203a;
+}
+
+[data-daypart="night"] .stop::before {
+  box-shadow: 0 0 0 4px var(--lane);
+}
+
+.landscape .far-hill {
+  fill: #dce8d8;
+}
+
+[data-daypart="night"] .landscape .far-hill {
+  fill: #33494a;
+}
+
+.landscape .sky-stars {
+  fill: #8f9ab3;
 }
 
 [data-daypart="night"] .landscape .sky-stars {
-  display: inline;
+  fill: #e9eef3;
+}
+
+[data-daypart="night"] {
+  --moon-x: 1230px;
+  --moon-y: 80px;
+}
+
+[data-daypart="night"] .landscape .sky-stars {
+  opacity: 1;
 }
 
 /* Ellie stands on the fence rail; only her tail moves */
@@ -780,6 +1028,47 @@ body pre[class*="language-"] {
   .landscape .layer-back { transform: translate(calc(var(--px, 0) * -10px), calc(var(--py, 0) * -3px)); }
   .landscape .layer-mid { transform: translate(calc(var(--px, 0) * -5px), 0); }
 
+  html {
+    transition: --day-top 1.6s ease, --day-mid 1.6s ease;
+  }
+  .home-page {
+    transition-property: --sky, --meadow, --hill-1, --hill-2, --hill-3, --hedge, --lane,
+      --ink, --ink-soft, --betty-deep, --wheat-deep, --dusk, --dusk-ink;
+    transition-duration: 1.6s;
+    transition-timing-function: ease;
+  }
+  .landscape {
+    transition: --hedge 1.6s ease;
+  }
+  .scene__pitch {
+    transition: color 1.6s ease;
+  }
+  .landscape .far-hill,
+  .landscape .fence {
+    transition: fill 1.6s ease, stroke 1.6s ease;
+  }
+  .landscape .cloud {
+    transition: opacity 1.6s ease;
+  }
+  .daypicker {
+    transition: background-color 1.6s ease, box-shadow 1.6s ease;
+  }
+
+  .landscape .sky-sun,
+  .landscape .sky-moon {
+    transition: transform 2.2s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+  .landscape .sky-rise {
+    transition: transform 2.2s cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+  .landscape .sun-disc,
+  .landscape .sun-glow {
+    transition: fill 1.6s var(--ease-out);
+  }
+  .landscape .sky-stars {
+    transition: opacity 1.6s var(--ease-out), fill 1.6s var(--ease-out);
+  }
+
   .landscape .cloud {
     animation: drift 70s ease-in-out infinite alternate;
   }
@@ -861,10 +1150,11 @@ body pre[class*="language-"] {
   .landscape .fence-cat { transform: translateX(-230px); }
   .landscape .cloud-far { display: none; }
   /* keep the sun and moon inside the scene's cropped centre on phones */
-  [data-daypart="morning"] .landscape .sky-sun { transform: translate(960px, 170px); }
-  [data-daypart="afternoon"] .landscape .sky-sun { transform: translate(990px, 70px); }
-  [data-daypart="evening"] .landscape .sky-sun { transform: translate(1060px, 168px); }
-  [data-daypart="night"] .landscape .sky-moon { transform: translate(960px, 90px); }
+  html { --sun-x: 1120px; --moon-x: 900px; }
+  [data-daypart="morning"] { --sun-x: 960px; --sun-y: 170px; }
+  [data-daypart="afternoon"] { --sun-x: 990px; --sun-y: 70px; }
+  [data-daypart="evening"] { --sun-x: 1060px; --sun-y: 168px; }
+  [data-daypart="night"] { --moon-x: 960px; --moon-y: 90px; }
   .trip { --indent: 3.5rem; --lane-x: 0.25rem; }
   .road { width: 2.25rem; }
   .road__van { width: 1.6rem; }

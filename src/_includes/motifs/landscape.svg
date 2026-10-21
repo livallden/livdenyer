@@ -6,11 +6,11 @@
   </defs>
 
   <!-- the sky follows the visitor's time of day (set on <html data-daypart>) -->
-  <g class="sky-sun"><circle class="sun-glow" r="54"/><circle class="sun-disc" r="24"/></g>
-  <g class="sky-moon">
+  <g class="sky-sun"><g class="sky-rise"><circle class="sun-glow" r="54"/><circle class="sun-disc" r="24"/></g></g>
+  <g class="sky-moon"><g class="sky-rise">
     <path d="M14-22a26 26 0 1 0 8 40 21 21 0 1 1-8-40Z" fill="#f4f1e2" stroke="#b9bfcf" stroke-width="1.5"/>
-  </g>
-  <g class="sky-stars" fill="#8f9ab3">
+  </g></g>
+  <g class="sky-stars">
     <circle cx="880" cy="60" r="1.8"/><circle cx="960" cy="110" r="1.4"/><circle cx="1110" cy="40" r="2"/>
     <circle cx="1210" cy="150" r="1.4"/><circle cx="1360" cy="120" r="1.8"/><circle cx="820" cy="150" r="1.2"/>
   </g>
@@ -21,7 +21,7 @@
       <g class="cloud cloud-near"><ellipse cx="1260" cy="128" rx="54" ry="12"/><ellipse cx="1286" cy="118" rx="28" ry="13"/></g>
     </g>
     <path d="M1120 150q8-8 16 0q8-8 16 0M1170 170q6-6 12 0q6-6 12 0" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linecap="round"/>
-    <path d="M640 300C820 250 960 150 1110 168s250 0 330-30V520H640Z" fill="#dce8d8"/>
+    <path class="far-hill" d="M640 300C820 250 960 150 1110 168s250 0 330-30V520H640Z"/>
   </g>
   <g transform="translate(0 160)">
     <g class="layer-back">
@@ -49,7 +49,7 @@
       <circle cx="34" cy="68" r="10" fill="var(--ink)"/><circle cx="110" cy="68" r="10" fill="var(--ink)"/>
     </g></g>
     <g transform="translate(1050 0)"><g class="fence-cat">
-      <g stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
+      <g class="fence" stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
         <path d="M70 330V262M150 322V258M230 316V256"/>
         <path d="M62 276l178-12M62 300l178-10"/>
       </g>

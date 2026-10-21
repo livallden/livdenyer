@@ -222,9 +222,30 @@ path: home
   (function () {
     var root = document.documentElement;
 
-    /* The sky follows the visitor's time of day. */
+    /* The sky follows the visitor's time of day, unless they've picked one in the navbar. */
+    var parts = ["morning", "afternoon", "evening", "night"];
     var h = new Date().getHours();
-    root.dataset.daypart = h >= 5 && h < 11 ? "morning" : h >= 11 && h < 17 ? "afternoon" : h >= 17 && h < 21 ? "evening" : "night";
+    var chosen = null;
+    try { chosen = localStorage.getItem("daypart"); } catch (err) {}
+    root.dataset.daypart = parts.indexOf(chosen) > -1 ? chosen
+      : h >= 5 && h < 11 ? "morning" : h >= 11 && h < 17 ? "afternoon" : h >= 17 && h < 21 ? "evening" : "night";
+
+    var picker = document.querySelector(".daypicker");
+    if (picker) {
+      var buttons = Array.prototype.slice.call(picker.querySelectorAll("button"));
+      var mark = function () {
+        buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.time === root.dataset.daypart)); });
+      };
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function () {
+          root.dataset.daypart = b.dataset.time;
+          mark();
+          try { localStorage.setItem("daypart", b.dataset.time); } catch (err) {}
+        });
+      });
+      mark();
+      picker.hidden = false;
+    }
 
     var svg = document.querySelector(".landscape");
     var road = document.querySelector(".road");
@@ -245,15 +266,19 @@ path: home
       ];
     }
 
-    function ribbon(endHalf) {
+    /* The curve ends a little above the road and the lane runs straight from there,
+       so it meets the timeline road already perfectly vertical. */
+    function ribbon(endHalf, end) {
       var left = [], right = [], n = 48;
       for (var i = 0; i <= n; i++) {
         var t = i / n, a = bez(t), b = bez(Math.min(1, t + 0.01)), c = bez(Math.max(0, t - 0.01));
         var dx = b[0] - c[0], dy = b[1] - c[1], len = Math.hypot(dx, dy) || 1;
-        var w = 3 + (endHalf - 3) * Math.pow(t, 1.6);
+        var w = 3 + (endHalf - 3) * Math.pow(Math.min(1, t / 0.8), 1.6);
         left.push((a[0] - (dy / len) * w).toFixed(1) + " " + (a[1] + (dx / len) * w).toFixed(1));
         right.unshift((a[0] + (dy / len) * w).toFixed(1) + " " + (a[1] - (dx / len) * w).toFixed(1));
       }
+      left.push((end[0] - endHalf).toFixed(1) + " " + end[1].toFixed(1));
+      right.unshift((end[0] + endHalf).toFixed(1) + " " + end[1].toFixed(1));
       return "M" + left.join("L") + "L" + right.join("L") + "Z";
     }
 
@@ -262,13 +287,13 @@ path: home
       var r = road.getBoundingClientRect(), s = svg.getBoundingClientRect();
       var inv = lane.getScreenCTM().inverse();
       var mid = new DOMPoint(r.left + r.width / 2, s.bottom).matrixTransform(inv);
-      var edge = new DOMPoint(r.right + 1, s.bottom).matrixTransform(inv);
+      var edge = new DOMPoint(r.right, s.bottom).matrixTransform(inv);
       var inner = new DOMPoint(r.right - 5, s.bottom).matrixTransform(inv);
       var e = mid.x, y = mid.y + 1;
-      p = [[1000, 176], [760, 236], [e, y - 150], [e, y]];
-      verge.setAttribute("d", ribbon(edge.x - e));
-      lane.setAttribute("d", ribbon(inner.x - e));
-      dash.setAttribute("d", "M" + p[0] + "C" + p[1] + " " + p[2] + " " + p[3]);
+      p = [[1000, 176], [760, 236], [e, y - 190], [e, y - 40]];
+      verge.setAttribute("d", ribbon(edge.x - e, [e, y]));
+      lane.setAttribute("d", ribbon(inner.x - e, [e, y]));
+      dash.setAttribute("d", "M" + p[0] + "C" + p[1] + " " + p[2] + " " + p[3] + "L" + e + " " + y);
     }
 
     function placeVan(t) {
